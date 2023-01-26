@@ -24,8 +24,11 @@ function Home(){
         <div>
             <Header/>
             <div>
-                <h3> Shop by category</h3>
-                {categories.map(category => <h3 key={category}>{category}</h3>)}
+                <label>Shop by category</label>
+                <select>
+                    {categories.map(category => 
+                    <option key={category} value={category}>{category}</option>)}
+                </select>
             </div>
             <div>
                 {products.map(product =><Product key = {product.id}product = {product}/>)}
