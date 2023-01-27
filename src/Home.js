@@ -23,8 +23,13 @@ function Home(){
     return(
         <div>
             <Header/>
+            <form>
+                <input type='text' placeholder='Search product ..'></input>
+                <button type="submit">Submit</button>
+            </form>
             <div>
                 <label>Shop by category</label>
+                <label>Select category</label>
                 <select>
                     {categories.map(category => 
                     <option key={category} value={category}>{category}</option>)}
