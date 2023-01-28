@@ -1,15 +1,13 @@
 import React from "react";
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom'
-import Home from "./Home";
-import SellerHome from "./seller/SellerHome";
+import {NavLink} from 'react-router-dom'
 
 function Header(){
     return(
-        <Routes>
-            <Route path="/sell" element= {<SellerHome/>}> Sell at ministore
-            </Route>
-        </Routes>
-        
+        <div>
+            <NavLink to='/sell'> Sell at Ministore</NavLink>
+            <NavLink to='cart'>Cart</NavLink>
+            <NavLink to= 'profile'>Profile</NavLink>
+        </div>        
     );
 }
 export default Header

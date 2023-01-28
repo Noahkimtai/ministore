@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Product from "./Product";
+import SellerHome from './seller/SellerHome'
 
 function Home(){
     const [products, setProducts] = useState([])
@@ -22,7 +24,11 @@ function Home(){
 
     return(
         <div>
-            <Header/>
+            <Header>
+                <Routes>
+                    <Route path="/sell" element={<SellerHome/>}></Route>          
+                </Routes>
+            </Header>
             <form>
                 <input type='text' placeholder='Search product ..'></input>
                 <button type="submit">Submit</button>
@@ -38,6 +44,8 @@ function Home(){
             <div>
                 {products.map(product =><Product key = {product.id}product = {product}/>)}
             </div>
+            <div>Recently Viewed</div>
+
         </div>
     );
 }
