@@ -4,6 +4,7 @@ import {NavLink} from 'react-router-dom'
 function Header(){
     return(
         <div>
+            <NavLink to='/'>Ministore</NavLink>
             <NavLink to='/sell'> Sell at Ministore</NavLink>
             <NavLink to='cart'>Cart</NavLink>
             <NavLink to= 'profile'>Profile</NavLink>
