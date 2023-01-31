@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import Product from '../../components/Product';
 import SellerHome from '../seller/SellerHome'
+import Search from "./search";
 
 function Home(){
     const [products, setProducts] = useState([])
@@ -40,20 +41,9 @@ function Home(){
 
     return(
         <div>
-            <form>
-                <input onChange={} type='text' placeholder='Search product ..'></input>
-                <button onClick={searchLogic(e.target.value)} type="submit">Submit</button>
-            </form>
+            <Search searchLogic ={searchLogic} filterLogic = {filterLogic} />
             <div>
-                <label>Shop by category</label>
-                <label>Select category</label>
-                <select>
-                    {categories.map(category => 
-                    <option key={category} value={category}>{category}</option>)}
-                </select>
-            </div>
-            <div>
-                {products.map(product =><Product key = {product.id} product = {product} addToCart ={addToCart}/> )}
+                {products.map(product => <Product key = {product.id} product = {product} addToCart ={addToCart}/> )}
             </div>
             <Routes>
                     <Route path="/sell" element={<SellerHome/>}></Route>          
