@@ -5,6 +5,8 @@ import SellerHome from '../seller/SellerHome'
 
 function Home(){
     const [products, setProducts] = useState([])
+    const [cart, setCart] = useState([])
+    
 
     // fetch all the products from the backend api
     useEffect(() =>{
@@ -20,12 +22,27 @@ function Home(){
         }
     })
 
+    function addToCart(id){
+        setCart(cart => cart.concat(products.filter(prod =>prod.id ===id)))
+    }
+
+    function filterLogic(category){
+        filterData = products.filter(product => product.category===e.target.value)
+        setProducts(filteredData)
+    }
+
+    function searchLogic(description){
+        filteredData = products.filter(product =>product.name.includes(description))
+        setProducts(filteredData);
+    }
+
+
 
     return(
         <div>
             <form>
-                <input type='text' placeholder='Search product ..'></input>
-                <button type="submit">Submit</button>
+                <input onChange={} type='text' placeholder='Search product ..'></input>
+                <button onClick={searchLogic(e.target.value)} type="submit">Submit</button>
             </form>
             <div>
                 <label>Shop by category</label>
@@ -36,7 +53,7 @@ function Home(){
                 </select>
             </div>
             <div>
-                {products.map(product =><Product key = {product.id}product = {product}/>)}
+                {products.map(product =><Product key = {product.id} product = {product} addToCart ={addToCart}/> )}
             </div>
             <Routes>
                     <Route path="/sell" element={<SellerHome/>}></Route>          
