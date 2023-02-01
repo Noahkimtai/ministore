@@ -36,7 +36,7 @@ function Home(){
     }
 
     function searchLogic(description){
-        const filteredData = products.filter(product =>product.name.includes(description))
+        const filteredData = products.filter(product =>product.title.includes(description))
         setProducts(filteredData);
     }
 
