@@ -27,8 +27,8 @@ function Home(){
         setCart(cart => cart.concat(products.filter(prod =>prod.id ===id)))
     }
 
-    function filterLogic(category){
-        filterData = products.filter(product => product.category===e.target.value)
+    function filterLogic(e){
+        filteredData = products.filter(product => product.category === e.target.value)
         setProducts(filteredData)
     }
 

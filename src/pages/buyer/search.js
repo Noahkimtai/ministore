@@ -4,13 +4,13 @@ function Search({filterLogic,searchLogic}){
     return(
         <div>
             <form>
-                <input onChange={searchLogic} type='text' placeholder='Search product ..'></input>
+                <input onChange={searchLogic(e)} type='text' placeholder='Search product ..'></input>
                 <button type="submit">Submit</button>
             </form>
             <div>
                 <label>Shop by category</label>
                 <label>Select category</label>
-                <select onChange={filterLogic}>
+                <select onChange={filterLogic(e)}>
                     {categories.map(category => 
                     <option key={category} value={category}>{category}</option>)}
                 </select>
