@@ -13,10 +13,11 @@ function Home(){
     useEffect(() =>{
         fetch('https://fakestoreapi.com/products').
         then(res => res.json()).
-        then(data => setProducts(data));
+        then(data =>{ setProducts(data)
+        });
     },[]);
 
-    let categories = [];
+    const categories = [];
 
     products.forEach(product => {
         if (! categories.includes(product.category)){
@@ -29,6 +30,7 @@ function Home(){
     }
 
     function filterLogic(e){
+        e.preventDefault()
         const filteredData = products.filter(product => product.category === e.target.value)
         setProducts(filteredData)
     }
