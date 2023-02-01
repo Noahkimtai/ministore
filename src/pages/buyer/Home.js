@@ -17,6 +17,7 @@ function Home(){
     },[]);
 
     let categories = [];
+
     products.forEach(product => {
         if (! categories.includes(product.category)){
             categories.push(product.category)
@@ -24,16 +25,16 @@ function Home(){
     })
 
     function addToCart(id){
-        setCart(cart => cart.concat(products.filter(prod =>prod.id ===id)))
+        setCart(cart => cart.concat(products.filter(prod =>prod.id === id)))
     }
 
     function filterLogic(e){
-        filteredData = products.filter(product => product.category === e.target.value)
+        const filteredData = products.filter(product => product.category === e.target.value)
         setProducts(filteredData)
     }
 
     function searchLogic(description){
-        filteredData = products.filter(product =>product.name.includes(description))
+        const filteredData = products.filter(product =>product.name.includes(description))
         setProducts(filteredData);
     }
 
@@ -41,7 +42,8 @@ function Home(){
 
     return(
         <div>
-            <Search searchLogic ={searchLogic} filterLogic = {filterLogic} />
+            <Search categories = {categories} searchLogic ={searchLogic} filterLogic = {filterLogic} />
+
             <div>
                 {products.map(product => <Product key = {product.id} product = {product} addToCart ={addToCart}/> )}
             </div>
