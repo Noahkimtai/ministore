@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import Product from '../../components/Product';
 import SellerHome from '../seller/SellerHome'
+import AddCart from "./AddCart";
 import Search from "./search";
 
 function Home(){
@@ -40,7 +41,10 @@ function Home(){
         setProducts(filteredData);
     }
 
-
+    function addToCart(id){
+        let addedToCart = products.filter(el => el.id === id)
+        cart.concat(addToCart)
+    }
 
     return(
         <div>
@@ -49,6 +53,10 @@ function Home(){
             <div>
                 {products.map(product => <Product key = {product.id} product = {product} addToCart ={addToCart}/> )}
             </div>
+            <div>
+                {cart.map(product => <AddCart key={product.id} cart= {cart} />)}
+            </div>
+                
             <Routes>
                     <Route path="/sell" element={<SellerHome/>}></Route>          
             </Routes>

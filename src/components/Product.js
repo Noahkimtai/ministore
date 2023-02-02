@@ -1,6 +1,6 @@
 import React from "react";
 
-function Product({product}){
+function Product({product, addToCart}){
     return(
         <div key={product.id}>
             <div>
@@ -12,7 +12,7 @@ function Product({product}){
                 <p>{product.rating.rate}</p>
             </div>
             <div>
-                <button>
+                <button onClick={addToCart(product.id)}>
                     Add to Basket
                 </button>
             </div>
