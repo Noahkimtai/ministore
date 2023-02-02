@@ -23,6 +23,7 @@ function Search({categories, filterLogic,searchLogic}){
                 <label>Shop by category</label>
                 <label>Select category</label>
                 <select onChange={filterLogic}>
+                    <option value='All'>All</option>
                     {categories.map(category => 
                     <option key={category} value={category}>{category}</option>)}
                 </select>

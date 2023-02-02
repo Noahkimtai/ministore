@@ -17,7 +17,7 @@ function Home(){
         });
     },[]);
 
-    const categories = [];
+    let categories = [];
 
     products.forEach(product => {
         if (! categories.includes(product.category)){
