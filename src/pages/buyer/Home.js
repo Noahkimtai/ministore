@@ -5,6 +5,7 @@ import SellerHome from '../seller/SellerHome'
 import AddCart from "./AddCart";
 import Search from "./search";
 
+
 function Home(){
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([])
@@ -56,12 +57,6 @@ function Home(){
             <div>
                 {cart.map(product => <AddCart key={product.id} cart= {cart} />)}
             </div>
-                
-            <Routes>
-                    <Route path="/sell" element={<SellerHome/>}></Route>          
-            </Routes>
-            <div>Recently Viewed</div>
-
         </div>
     );
 }
