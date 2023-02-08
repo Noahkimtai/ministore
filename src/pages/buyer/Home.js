@@ -51,7 +51,7 @@ function Home(){
         <div class = 'p-6'>
             <Search categories = {categories} searchLogic ={searchLogic} filterLogic = {filterLogic} />
 
-            <div class = 'bg-white grid grid-cols-6 gap-y-6 gap-x-6 place-items-center'>
+            <div class = 'bg-white grid grid-cols-6 gap-y-6 gap-x-8 place-items-center md: grid grid-cols-4'>
                 {products.map(product => <Product key = {product.id} product = {product} addToCart ={addToCart}/> )}
             </div>
             <div>
