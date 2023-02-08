@@ -21,7 +21,6 @@ function Search({categories, filterLogic,searchLogic}){
             </form>
             <div>
                 <label>Shop by category</label>
-                <label>Select category</label>
                 <select onChange={filterLogic}>
                     <option value='All'>All</option>
                     {categories.map(category => 
