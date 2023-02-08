@@ -48,10 +48,10 @@ function Home(){
     }
 
     return(
-        <div>
+        <div class = 'p-6'>
             <Search categories = {categories} searchLogic ={searchLogic} filterLogic = {filterLogic} />
 
-            <div>
+            <div class = 'bg-white grid grid-cols-6 gap-y-6 gap-x-6 place-items-center'>
                 {products.map(product => <Product key = {product.id} product = {product} addToCart ={addToCart}/> )}
             </div>
             <div>

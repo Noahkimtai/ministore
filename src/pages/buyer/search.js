@@ -14,10 +14,10 @@ function Search({categories, filterLogic,searchLogic}){
     }
 
     return(
-        <div>
+        <div class = 'grid grid-cols-2 g-3'>
             <form>
                 <input onChange={handleSearch} type='text' placeholder='Search product ..'></input>
-                <button type="submit">Submit</button>
+                <button class = 'bg-slate-500 p-2 hover:bg-slate-50'type="submit">Search</button>
             </form>
             <div>
                 <label>Shop by category</label>
