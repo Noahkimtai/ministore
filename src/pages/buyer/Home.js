@@ -4,6 +4,7 @@ import Product from '../../components/Product';
 import SellerHome from '../seller/SellerHome'
 import AddCart from "./AddCart";
 import Search from "./search";
+import About from "./About";
 
 
 function Home(){
@@ -57,6 +58,7 @@ function Home(){
             <div>
                 {cart.map(product => <AddCart key={product.id} cart= {cart} />)}
             </div>
+            <About />
         </div>
     );
 }
