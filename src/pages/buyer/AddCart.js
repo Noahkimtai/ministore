@@ -4,7 +4,9 @@ import Product from "../../components/Product";
 function AddCart(cart){
     return(
         <div>
-             <Product key={cart.id} product ={cart} />
+            <p>Hello</p>
+            <p>{cart.price}</p>
+             {/* <Product key={cart.id} product ={cart} /> */}
         </div>
     )
 };

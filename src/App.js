@@ -4,6 +4,7 @@ import Home from './pages/buyer/Home';
 import Header from './pages/buyer/Header';
 import SellerHome from './pages/seller/SellerHome';
 import RecentlyViewed from "./pages/buyer/RecentlyViewed";
+import AddCart from './pages/buyer/AddCart';
 
 function App() {
 
@@ -12,8 +13,9 @@ function App() {
       <Header/>
       <Routes>
         <Route  exact path="/" element={<Home/>}/>
-        <Route path="/sell" element= {<SellerHome/>}/> 
-        <Route path="/recent" element= {<RecentlyViewed/>}/>
+        <Route path = "/sell" element= {<SellerHome/>}/> 
+        <Route path = "/recent" element= {<RecentlyViewed/>}/>
+        <Route path ='/cart' element = {<AddCart/>}/>
         <Route path="*" component = {notFound}/>
       </Routes>
     </div>);
