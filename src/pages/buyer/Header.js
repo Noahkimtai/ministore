@@ -7,7 +7,7 @@ function Header(){
             <NavLink className = 'hover:bg-slate-400'to='/'>Home</NavLink>
             <NavLink className = 'hover:bg-slate-400'to='/sell' > Sell at Ministore</NavLink>
             <NavLink className = 'hover:bg-slate-400'to='/cart' >Cart</NavLink>
-            <NavLink className = 'hover:bg-slate-400'to= 'profile' >Profile</NavLink>
+            <NavLink className = 'hover:bg-slate-400'to= '/profile' >Profile</NavLink>
             <NavLink className = 'hover:bg-slate-400' to= '/recent'>Recently Viewed</NavLink>
         </div>        
     );

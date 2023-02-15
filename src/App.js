@@ -5,6 +5,7 @@ import Header from './pages/buyer/Header';
 import SellerHome from './pages/seller/SellerHome';
 import RecentlyViewed from "./pages/buyer/RecentlyViewed";
 import AddCart from './pages/buyer/AddCart';
+import Profile from './pages/buyer/Profile';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path = "/sell" element= {<SellerHome/>}/> 
         <Route path = "/recent" element= {<RecentlyViewed/>}/>
         <Route path ='/cart' element = {<AddCart/>}/>
+        <Route path = '/profile' element = {<Profile/>}/>
         <Route path="*" component = {notFound}/>
       </Routes>
     </div>);

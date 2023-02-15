@@ -40,7 +40,7 @@ function Home(){
     function addToCart(id){
         alert(id)
         const filteredData = products.filter(el =>el.id ===id)
-        setCart(() => cart.concat(filteredData))
+        setCart(filteredData)
         alert(cart.length)
     }
 
