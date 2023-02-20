@@ -1,6 +1,15 @@
+import { render } from "@testing-library/react";
 import React from "react";
+import Signup from "./Signup";
 
 function Login(){
+    
+    const renderSignup = ()=>{
+        render(
+            <Signup/>
+        )
+    }
+    
     return(
         <div>
             <form>
@@ -16,6 +25,8 @@ function Login(){
                     <button type="submit">Submit</button>
                 </div>
             </form>
+            <p>Don't have an account</p>
+            <button onClick={renderSignup}> Sign UP</button>
         </div>
     )
 }

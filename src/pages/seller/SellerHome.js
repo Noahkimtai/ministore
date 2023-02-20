@@ -1,10 +1,10 @@
 import React from "react";
 import Login from "./Login";
+import Signup from "./Signup";
 
 function SellerHome(){
     return(
         <div>
-            Sell your products here
             <Login />
         </div>
     )
