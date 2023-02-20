@@ -4,7 +4,6 @@ import Signup from "../seller/Signup";
 function Profile(){
     return(<div>
         <Login/>
-        <Signup/>
     </div>)
 }
 export default Profile
