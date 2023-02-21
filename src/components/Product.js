@@ -12,7 +12,7 @@ function Product({product, addToCart}){
                 <p>{product.rating.rate}</p>
             </div>
             <div className = ' flex justify-center items-center p-2'>
-                <button className = 'bg-slate-500 p-2 hover:bg-slate-50' onClick= { ()=> addToCart(product.id)}>
+                <button className = 'bg-slate-500 p-2 rounded-sm hover:bg-slate-50' onClick= { ()=> addToCart(product.id)}>
                     Add to Basket
                 </button>
             </div>

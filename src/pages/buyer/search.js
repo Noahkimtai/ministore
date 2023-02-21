@@ -16,12 +16,11 @@ function Search({categories, filterLogic,searchLogic}){
     return(
         <div className = 'grid grid-cols-2 g-3'>
             <form>
-                <input onChange={handleSearch} type='text' placeholder='Search' className = "form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"></input>
+                <input onChange={handleSearch} className ="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" type='text' placeholder='Search'></input>
             </form>
             <div>
-                <label className ='p-6'>Shop by category</label>
-                <select onChange={filterLogic} >
-                    <option value='All'>All</option>
+                <select onChange={filterLogic} className ="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" >
+                    <option value='All'>Filter By Category</option>
                     {categories.map(category => 
                     <option key={category} value={category}>{category}</option>)}
                 </select>
